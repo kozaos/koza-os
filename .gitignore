@@ -1,0 +1,6 @@
+/repo/
+/out/
+/work/
+*.pkg.tar.zst
+*.pkg.tar.zst.sig
+*.iso
