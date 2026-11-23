@@ -30,8 +30,9 @@ for flavor in "${flavors[@]}"; do
         cp -a "$root/archiso/$flavor/airootfs/." "$profile/airootfs/"
     fi
     # Flavor packages are optional; duplicates are dropped, first occurrence wins.
-    cat "$root/archiso/common/packages.x86_64" "$root/archiso/$flavor/packages.x86_64" 2>/dev/null \
-        | awk '!seen[$0]++' > "$profile/packages.x86_64"
+    flavor_pkgs="$root/archiso/$flavor/packages.x86_64"
+    [[ -f "$flavor_pkgs" ]] || flavor_pkgs=/dev/null
+    awk '!seen[$0]++' "$root/archiso/common/packages.x86_64" "$flavor_pkgs" > "$profile/packages.x86_64"
 
     sed -i "s/^iso_name=.*/iso_name=\"kozaos-$flavor\"/" "$profile/profiledef.sh"
     sed -i "/^\[options\]/a CacheDir = $cache" "$profile/pacman.conf"
