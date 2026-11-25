@@ -1,0 +1,13 @@
+{
+  "policies": {
+    "ExtensionSettings": {
+      "uBlock0@raymondhill.net": {
+        "installation_mode": "force_installed",
+        "install_url": "file:///usr/lib/firefox/browser/extensions/uBlock0@raymondhill.net.xpi"
+      }
+    },
+    "Preferences": {
+      "intl.locale.requested": { "Value": "", "Status": "default" }
+    }
+  }
+}
