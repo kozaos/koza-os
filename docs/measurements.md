@@ -9,3 +9,4 @@ Only values that were actually measured go here.
 | 2026-11-26 | XFCE | BIOS | – | – | Desktop appeared, not measured |
 | 2026-11-26 | XFCE | BIOS, 2 GB RAM | 506 (1451 available) | 1.588s + 15.894s = 17.483s | Desktop usable |
 | 2026-11-26 | XFCE | UEFI, `-cpu core2duo` (TCG) | – | – | Desktop + Firefox OK; Firefox `crashreporter` SIGILL (SSE4.1 `pextrq` in aho_corasick) |
+| 2026-11-26 | KDE | UEFI | 1203 | 1.762s + 20.956s = 22.719s | Live ISO, Phase 1, Wayland, measured ~15 min after login; no audio device in VM |
